@@ -1,0 +1,25 @@
+server:
+  port: 8092
+
+api:
+  jsonplaceholder:
+    domain: 'jsonplaceholder.typicode.com'
+    endpoint:
+      users: '/users'
+      posts: '/posts'
+      comments: '/comments'
+
+database: 
+  db-name: "exercise2"
+
+spring:
+  datasource:
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/${database.db-name}"
+    username: "postgres"
+    password: "admin1234"
+
+spring.jpa:
+  show-sql: true
+  hibernate.ddl-auto: update # update
+  # Hibernate ddl auto (create, create-drop, validate, update)
